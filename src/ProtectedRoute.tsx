@@ -1,0 +1,1 @@
+const ProtectedRoute = ({ children }) => <Authenticator>{children}</Authenticator>;
