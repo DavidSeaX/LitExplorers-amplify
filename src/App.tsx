@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Authenticator } from '@aws-amplify/ui-react';
 import ProtectedRoute from './components/ProtectedRoute';
+import Bookshelf from './pages/Bookshelf';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Route path="/" element={<Home />} />          {/* public */}
       <Route path="/discover" element={<Discover />} />
       <Route path="/*" element={<ProtectedRoute><Pages /></ProtectedRoute>} />  {/* all else behind login */}
+      <Route path="/bookshelf" element={<Bookshelf />} />
     </Routes>
   );
 }
